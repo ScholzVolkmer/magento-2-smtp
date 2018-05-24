@@ -1,18 +1,15 @@
 {
-  "name": "mageplaza/module-smtp",
-  "description": "SMTP Extension for Magento 2 helps the owner of store simply install SMTP (Simple Mail Transfer Protocol) server which transmits the messages into codes or numbers",
+  "name": "scholzvolkmer/magento2-smtp",
+  "description": "SMTP Extension for Magento 2 helps the owner of store simply install SMTP (Simple Mail Transfer Protocol) server which transmits the messages into codes or numbers. Based on mageplaza/magento-2-smtp.",
   "require": {
     "mageplaza/module-core": "^1.3.10"
   },
   "type": "magento2-module",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "license": "proprietary",
   "authors": [
     {
-      "name": "Mageplaza",
-      "email": "support@mageplaza.com",
-      "homepage": "https://www.mageplaza.com",
-      "role": "Technical Support"
+      "name": "Scholz & Volkmer GmbH",
     }
   ],
   "minimum-stability": "dev",
@@ -20,7 +17,6 @@
     "magento 2",
     "magento 2 smtp",
     "magento smtp",
-    "mageplaza",
     "smtp",
     "email settings",
     "gmail smtp"
