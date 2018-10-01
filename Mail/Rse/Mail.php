@@ -86,15 +86,15 @@ class Mail extends \Zend_Application_Resource_Mail
     {
         if (!isset($this->_smtpOptions[$storeId])) {
             $configData = $this->smtpHelper->getConfig(Data::CONFIG_GROUP_SMTP, '', $storeId);
-            $this->_smtpOptions[$storeId] = [
+            $this->_smtpOptions[$storeId] = array_filter([
                 'type' => 'smtp',
                 'host' => isset($configData['host']) ? $configData['host'] : '',
-                'ssl' => isset($configData['protocol']) ? $configData['protocol'] : null,
+                'ssl' => isset($configData['protocol']) ? $configData['protocol'] : '',
                 'port' => isset($configData['port']) ? $configData['port'] : '',
                 'auth' => isset($configData['authentication']) ? $configData['authentication'] : '',
                 'username' => isset($configData['username']) ? $configData['username'] : '',
                 'password' => isset($configData['password']) ? $this->encryptor->decrypt($configData['password']) : '',
-            ];
+            ]);
         }
 
         $this->_transport = null;
